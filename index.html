@@ -206,7 +206,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-10-02 21:09:47 / 修改时间：22:10:27" itemprop="dateCreated datePublished" datetime="2021-10-02T21:09:47+08:00">2021-10-02</time>
+      <time title="创建时间：2021-10-02 21:09:47 / 修改时间：22:19:45" itemprop="dateCreated datePublished" datetime="2021-10-02T21:09:47+08:00">2021-10-02</time>
     </span>
 
   
@@ -219,7 +219,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="一、Miller-Rabin算法介绍"><a href="#一、Miller-Rabin算法介绍" class="headerlink" title="一、Miller-Rabin算法介绍"></a><strong>一、Miller-Rabin算法介绍</strong></h1><p>​    Miller-Rabin 算法（强伪素数检测）利用原理：若 n 为素数，则根据费马小定理：若n是一个素数，且(a,n)=1，则</p>
+          <p><strong>自言自语</strong></p>
+<p>第一次使用hexo写博客，很多东西都不熟悉，公式什么的都写的很丑φ(*￣0￣)，接下来继续努力去做的更好！</p>
+<hr>
+<h1 id="一、Miller-Rabin算法介绍"><a href="#一、Miller-Rabin算法介绍" class="headerlink" title="一、Miller-Rabin算法介绍"></a><strong>一、Miller-Rabin算法介绍</strong></h1><p>​    Miller-Rabin 算法（强伪素数检测）利用原理：若 n 为素数，则根据费马小定理：若n是一个素数，且(a,n)=1，则</p>
 <p>a^(n-1)=1<em>mod</em>m</p>
 <p>且a^m^(<em>mod</em>m)只有 1 和-1 两个平方根。</p>
 <p>​    首先，假设n为一个非2素数，则 n-1 为一个偶数，任何一个偶数可以写成2^m^的形式，其中m为一个奇数。随机选取a，满足1 ≤ 𝑎 ≤ 𝑛 − 1。将a^m^(<em>mod</em>m)赋值给一个新的变量b。如果，𝑏 ≡ 1(𝑚𝑜𝑑𝑛)，则表明假设成立，n 为大于 2 的素数。否则，进行k次循环，每次循环判断，若𝑏≡−1(𝑚𝑜𝑑𝑛)，则n为大于2的素数，否则将b^2^(<em>mod</em>m)赋值给b，继续循环。若最终没有得到𝑏≡−1(𝑚𝑜𝑑𝑛)，则n为一个合数。</p>
